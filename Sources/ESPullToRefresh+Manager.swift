@@ -95,10 +95,11 @@ open class ESRefreshDataManager {
     
     public static func clearLastRefreshInfo() {
         UserDefaults.standard.set(nil, forKey: ESRefreshDataManager.lastRefreshKey)
+        UserDefaults.standard.synchronize()
     }
     
     public static func clearExpiredTimeIntervalInfo() {
         UserDefaults.standard.set(nil, forKey: ESRefreshDataManager.expiredTimeIntervalKey)
+        UserDefaults.standard.synchronize()
     }
-    
 }
